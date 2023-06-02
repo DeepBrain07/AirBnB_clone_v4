@@ -158,7 +158,10 @@ Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twit
 Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://twitter.com/earthtojhuang)  
 Jhoan Zamora - [Github](https://github.com/jzamora5) / [Twitter](https://twitter.com/JhoanZamora10)  
 David Ovalle - [Github](https://github.com/Nukemenonai) / [Twitter](https://twitter.com/disartDave)
+Tijani Saheed Olalekan - [Github](https://github.com/TSOlami) / [Twitter](https://twitter.com/def_input_name) / [Linkedin](https://linkedin.com/in/saheed-tijani-b9935625b)
+Timilehin Olusa - [Github](https://github.com/DeepBrain07) / [Twitter](https://twitter.com/TimmieOlusa)
 
 Second part of Airbnb: Joann Vuong
+Third part of Airbnb: Tijani Saheed Olalekan, Timilehin Olusa.
 ## License
 Public Domain. No copy write protection. 
