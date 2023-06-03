@@ -1,10 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-	/*if ($("input#data-id").prop("checked")){
-		prompt("YEA");
-	}*/
-	$("input[type=checkbox]").change(
+	
+	const amenityList = {};
+	$("li input[type=checkbox]").change(
 		function(){
-		if (data_id.checked){
-			alert("checked")
-			}
+		if (this.checked){
+			amenityList[this.dataset.name] = this.dataset.id;
+		} else { 
+			delete amenityList[this.dataset.name];
+		}
+		$(".amenities h4").text(Object.keys(amenityList).sort().join(", "));
+		});
 		});
