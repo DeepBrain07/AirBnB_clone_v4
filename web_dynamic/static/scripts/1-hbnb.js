@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-	
+$(document).ready(function () {
 	const amenityList = {};
 	$("li input[type=checkbox]").change(
 		function(){
@@ -9,5 +8,5 @@ document.addEventListener("DOMContentLoaded", () => {
 			delete amenityList[this.dataset.name];
 		}
 		$(".amenities h4").text(Object.keys(amenityList).sort().join(", "));
-		});
-		});
+	});
+});
