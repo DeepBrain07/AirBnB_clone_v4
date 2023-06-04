@@ -21,12 +21,12 @@ $(document).ready(function () {
 		data: JSON.stringify({}),
 		contentType: 'application/json',
 		success: function(response) {
-			//console.log(response);
-			$(".price_by_night").text(response.price_by_night);
-			$(".max_guest").text(response.max_guest);
-			$(".number_rooms").text(response.number_rooms);
-			$(".number_bathrooms").text(response.number_bathrooms);
-			$("div.description").text(response.description);
+			res = response['0'];
+			$(".price_by_night").html(res.price_by_night);
+			$(".max_guest").html(res.max_guest);
+			$(".number_rooms").html(res.number_rooms);
+			$(".number_bathrooms").html(res.number_bathrooms);
+			$("div.description").html(res.description);
 		},
 		error: function(error) {
 			console.log("ERROR");
