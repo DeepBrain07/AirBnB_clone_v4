@@ -21,13 +21,15 @@ $(document).ready(function () {
 		data: JSON.stringify({}),
 		contentType: 'application/json',
 		success: function(response) {
-			//console.log("YEA");
+			//console.log(response);
+			$(".price_by_night").text(response.price_by_night);
+			$(".max_guest").text(response.max_guest);
+			$(".number_rooms").text(response.number_rooms);
+			$(".number_bathrooms").text(response.number_bathrooms);
+			$("div.description").text(response.description);
 		},
 		error: function(error) {
-			//console.log("ERROR");
+			console.log("ERROR");
 		}
-	});/*
-	$.post("http://127.0.0.1:5001/api/v1/places_search/", {}, function(response){
-		console.log(response);
-	});*/
+	});
 });
