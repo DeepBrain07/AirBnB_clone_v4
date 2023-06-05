@@ -1,31 +1,14 @@
 $(document).ready(function () {
 	let amenityList = {};
-	$("ul li input[type=checkbox]").on("change", (e) => {
-		let eventList = e.target;
-		let cl;
-		switch (eventList.id) {
-			case "state_filter":
-				cl = states;
-				break;
-			case "city_filter"
-				cl = cities;
-				break;
-			case "amenity_filter"
-				cl = amenities;
-				break;
-		}
-		if (eventList.checked){
-			cl[eventList.dataset.name] = eventList.dataset.id;
+	$("li input[type=checkbox]").change(
+		function(){
+		if (this.checked){
+			amenityList[this.dataset.name] = this.dataset.id;
 		} else { 
-			delete cl[eventList.dataset.name];
+			delete amenityList[this.dataset.name];
 		}
-		if (eventList.id === "amenity_filter") {
-			$(".amenities h4").text(Object.keys(amenityList).sort().join(", "));
-
-		} else {
-			$(".location h4").text(Object.keys(Object.assign({}, states, cities)).sort().join(", "));
-		}
-	});
+		$(".amenities h4").text(Object.keys(amenityList).sort().join(", "));
+		});
 	$.getJSON("http://127.0.0.1:5001/api/v1/status/", (data) => {
 		if (data.status === "OK") {
 			$("div#api_status").addClass("available");
@@ -53,11 +36,7 @@ $(document).ready(function () {
 		$.ajax({url:  "http://127.0.0.1:5001/api/v1/places_search/",
 			type: 'POST',
 			dataType: 'json',
-<<<<<<< HEAD
 			data: JSON.stringify({'amenities': Object.keys(amenityList)}),
-=======
-			data: JSON.stringify({'amenities': Object.keys(amenityList), 'states': Object.keys(stateList), 'cities': Object.keys(cityList)}),
->>>>>>> dc341da20e56754a559e384a7f194e5e08e27545
 			contentType: 'application/json',
 			success: function(data) {
 				for (let i = 0; i < data.length; i++) {

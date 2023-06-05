@@ -53,11 +53,7 @@ $(document).ready(function () {
 		$.ajax({url:  "http://127.0.0.1:5001/api/v1/places_search/",
 			type: 'POST',
 			dataType: 'json',
-<<<<<<< HEAD
-			data: JSON.stringify({'amenities': Object.keys(amenityList)}),
-=======
 			data: JSON.stringify({'amenities': Object.keys(amenityList), 'states': Object.keys(stateList), 'cities': Object.keys(cityList)}),
->>>>>>> dc341da20e56754a559e384a7f194e5e08e27545
 			contentType: 'application/json',
 			success: function(data) {
 				for (let i = 0; i < data.length; i++) {

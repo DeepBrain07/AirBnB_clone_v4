@@ -11,16 +11,14 @@
 
      <!-- Import jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js?{{cache_id}}"></script>
-<<<<<<< HEAD
-=======
 
-     <!-- Import 1-hbnb.js -->
->>>>>>> dc341da20e56754a559e384a7f194e5e08e27545
-    <script type="text/javascript" src="../static/scripts/1-hbnb.js?{{cache_id}}"></script>
+     <!-- Import 2-hbnb.js -->
+    <script type="text/javascript" src="../static/scripts/2-hbnb.js?{{cache_id}}"></script>
     <title>HBnB</title>
   </head>
   <body>
     <header>
+      <div id="api_status"></div>
       <div class="logo"></div>
     </header>
     <div class="container">
@@ -50,11 +48,7 @@
 	    <ul>
 	      {% for amenity in amenities %}
 	      <li>
-<<<<<<< HEAD
-		      <input type="checkbox" style="margin-left: 10px;" data-id={{ amenity.id }} data-name={{ amenity.name }} >
-=======
-		      <input type="checkbox" style="margin-left: 10px;" data-id={{ amenity.id }} data-name={{ amenity_name }}>
->>>>>>> dc341da20e56754a559e384a7f194e5e08e27545
+		      <input type="checkbox" style="margin-left: 10px;" data-id={{ amenity.id }} data-name={{ amenity.name }}>
 		      {{ amenity.name }}
 	      </li>
 	      {% endfor %}
